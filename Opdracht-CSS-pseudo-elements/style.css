@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:700");
+
+body {
+  background: #231f20;
+  text-align: center;
+}
+
+h1 {
+  color: #fff;
+  font-family: "Oswald";
+  font-weight: 700;
+  position: relative;
+  margin: 30px auto;
+  text-transform: uppercase;
+  width: 550px;
+}
+
+h1::before,
+h1::after {
+  /* gezamelijke eigenschappen van de halve cirkels: */
+  background: #4a90e2;
+  content: "";
+  display: inline-block;
+  height: 40px;
+  width: 25px;
+  position: absolute;
+}
+
+h1::before {
+  border-radius: 200px 0px 0px 200px;
+  left: 20px;
+  top: 4px;
+  /* // Positioneer je halve rondje met left en top */
+}
+
+h1::after {
+  border-radius: 0 200px 200px 0;
+  top: 4px;
+  left: 504px;
+}
