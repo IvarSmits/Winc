@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.link1:hover {
+  color: blue;
+  font-weight: bold;
+}
+
+.link2:active {
+  color: red;
+  font-style: italic;
+}
+
+.link3:visited {
+  color: yellow;
+}
+
+.input4:focus {
+  color: green;
+  font-size: 20px;
+}
+nav {
+  background-color: darkblue;
+}
+nav > ul {
+  display: flex;
+  list-style: none;
+}
+
+nav li:hover {
+  background-color: lightblue;
+}
+
+ul li > a {
+  text-decoration: none;
+}
+
+ul li:not(:first-child) {
+  margin-left: 20px;
+}
+
+.currentPage {
+  background-color: #69c;
+}
+
+nav input:focus {
+  border: 5px solid aqua;
+}
