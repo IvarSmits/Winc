@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+ul > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul > li a {
+  padding-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes moveOut {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+
+@mixin styling-button {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+}
+
+.social-media {
+  bottom: 100px;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  width: 650px;
+  left: calc(100% - 55px);
+
+  li {
+    position: relative;
+    transition: transform 2s;
+    animation-name: moveOut;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    height: 50px;
+  }
+
+  li:hover {
+    animation-name: moveIn;
+  }
+
+  &__blog {
+    background-color: #e17b77;
+  }
+
+  &__blog::before {
+    @include styling-button();
+    content: "\f5fc";
+  }
+
+  &__facebook {
+    background-color: #3b5998;
+  }
+
+  &__facebook::before {
+    @include styling-button;
+    content: "\f5fc";
+  }
+  &__twitter {
+    background-color: #00aced;
+    content: "\f5fc";
+  }
+  &__twitter::before {
+    @include styling-button;
+    content: "\f5fc";
+  }
+
+  &__github {
+    background-color: #333;
+  }
+
+  &__github::before {
+    @include styling-button();
+    content: "\f5fc";
+  }
+
+  &__linkedin {
+    background-color: #007bb6;
+  }
+
+  &__linkedin::before {
+    @include styling-button();
+    content: "\f5fc";
+  }
+}

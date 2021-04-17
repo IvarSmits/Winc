@@ -1,0 +1,136 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+ul > li {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+ul > li a {
+  padding-left: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@-webkit-keyframes moveIn {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+
+@keyframes moveIn {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-300px);
+  }
+}
+@-webkit-keyframes moveOut {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+@keyframes moveOut {
+  from {
+    transform: translateX(-300px);
+  }
+  to {
+    transform: translateX(0px);
+  }
+}
+.social-media {
+  bottom: 100px;
+  color: white;
+  font-size: 30px;
+  position: absolute;
+  width: 650px;
+  left: calc(100% - 55px);
+}
+.social-media li {
+  position: relative;
+  transition: transform 2s;
+  -webkit-animation-name: moveOut;
+          animation-name: moveOut;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+  height: 50px;
+}
+.social-media li:hover {
+  -webkit-animation-name: moveIn;
+          animation-name: moveIn;
+}
+.social-media__blog {
+  background-color: #e17b77;
+}
+.social-media__blog::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+  content: "";
+}
+.social-media__facebook {
+  background-color: #3b5998;
+}
+.social-media__facebook::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+  content: "";
+}
+.social-media__twitter {
+  background-color: #00aced;
+  content: "";
+}
+.social-media__twitter::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+  content: "";
+}
+.social-media__github {
+  background-color: #333;
+}
+.social-media__github::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+  content: "";
+}
+.social-media__linkedin {
+  background-color: #007bb6;
+}
+.social-media__linkedin::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  display: flex;
+  padding-left: 10px;
+  content: "";
+}/*# sourceMappingURL=style.css.map */
