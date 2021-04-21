@@ -19,9 +19,9 @@ let evaluateNumber = function (number) {
 function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
-  return Math.floor(Math.random() * (max - min) + min); //The maximum is exclusive and the minimum is inclusive
+  return Math.floor(Math.random() * (max - min) + min);
 }
-// initieel bericht: Welkom wat is je naam
+
 let name = prompt("Welkom! Wat is je naam?");
 
 alert(`Hey ${name}`);
@@ -30,14 +30,12 @@ takeAGuess();
 
 alert(`Dag ${name}. Tot de volgende keer`);
 
-// func begroeting
-// get input
-// pick math random
-// evaluate
 // get input
 // pick math random
 // evaluate
 
-// Max 5 pogingen
+// repeat
 
-//nummer range
+// get input
+// pick math random
+// evaluate
