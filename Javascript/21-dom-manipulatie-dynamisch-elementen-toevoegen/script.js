@@ -1,26 +1,24 @@
+const spottedAnimalsList = document.getElementById("spotted-animals-list");
+
 const animalSpotted = (event) => {
-  const list = document.getElementById("spotted-animals-list");
+  const spottedAnimal = event.target.textContent;
   const listItem = document.createElement("li");
   listItem.appendChild(document.createTextNode(spottedAnimal));
-  const spottedAnimal = event.target.innerHTML;
-  list.appendChild(listItem);
+  spottedAnimalsList.appendChild(listItem);
+  console.log("spotted:", event.target.textContent);
 };
 
-const removeFirstItem = () => {
-  const firstItem = document.getElementById("spotted-animals-list").firstChild;
-  firstItem.remove();
+const removeFirstItem = (e) => {
+  // Using children instead of child nodes. To prevent empty nodes to be removed instead of "real" elements
+  spottedAnimalsList.removeChild(spottedAnimalsList.children[0]);
 };
 
 const removeAll = () => {
-  const spottedAnimalsList = document.getElementById("spotted-animals-list");
   Array.from(spottedAnimalsList.children).forEach((e) => e.remove());
 };
 
 document.addEventListener("DOMContentLoaded", function () {
-  // store all buttons
   const animalButtons = document.querySelectorAll(".big-five-button");
-
-  // Add event listeners to all buttons
   animalButtons.forEach(function (animalButton) {
     animalButton.addEventListener("click", animalSpotted);
   });
